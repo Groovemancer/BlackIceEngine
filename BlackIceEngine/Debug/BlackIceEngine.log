@@ -1,0 +1,68 @@
+﻿Build started 10/7/2014 1:24:39 AM.
+     1>Project "X:\Game Development\Code\BlackIceEngine\BlackIceEngine\BlackIceEngine.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\BlackIceEngine.unsuccessfulbuild".
+       ClCompile:
+         X:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Game.cpp Helpers.cpp InputManager.cpp MainApplication.cpp MainGame.cpp Screen.cpp ScreenManager.cpp TestScreen.cpp Texture.cpp Timer.cpp Vector2f.cpp
+         Vector2f.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         Timer.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         Texture.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         TestScreen.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         ScreenManager.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         Screen.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         MainGame.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         MainApplication.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         InputManager.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         Helpers.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+         Game.cpp
+     1>x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+                 x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+     1>x:\game development\code\blackiceengine\blackiceengine\game.cpp(65): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+     1>x:\game development\code\blackiceengine\blackiceengine\game.cpp(65): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+         Generating Code...
+       Link:
+         X:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe" /NOLOGO SDL2.lib SDL2main.lib SDL2_image.lib SDL2_mixer.lib SDL2_ttf.lib OpenGL32.lib freeglut.lib DevIL.lib ilu.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\BlackIceEngine.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.lib" /MACHINE:X86 Debug\Camera.obj
+         Debug\Game.obj
+         Debug\Helpers.obj
+         Debug\InputManager.obj
+         Debug\MainApplication.obj
+         Debug\MainGame.obj
+         Debug\Screen.obj
+         Debug\ScreenManager.obj
+         Debug\TestScreen.obj
+         Debug\Texture.obj
+         Debug\Timer.obj
+         Debug\Vector2f.obj
+         LINK : X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe not found or not built by the last incremental link; performing full link
+     1>MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+         BlackIceEngine.vcxproj -> X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe;#1" /manifest Debug\BlackIceEngine.exe.intermediate.manifest
+       FinalizeBuildStatus:
+         Deleting file "Debug\BlackIceEngine.unsuccessfulbuild".
+         Touching "Debug\BlackIceEngine.lastbuildstate".
+     1>Done Building Project "X:\Game Development\Code\BlackIceEngine\BlackIceEngine\BlackIceEngine.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.98

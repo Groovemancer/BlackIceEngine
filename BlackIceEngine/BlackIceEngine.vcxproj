@@ -37,15 +37,16 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>X:\gamedev\libs\freeglut\include;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\include;X:\gamedev\libs\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>X:\Program Files %28x86%29\Visual Leak Detector\include;X:\gamedev\libs\freeglut\include;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\include;X:\gamedev\libs\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <LibraryPath>X:\gamedev\libs\DevIL-SDK-x86-1.7.8\lib;X:\gamedev\libs\freeglut\lib;X:\gamedev\libs\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>X:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\lib;X:\gamedev\libs\freeglut\lib;X:\gamedev\libs\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>X:\Game Development\Code\BlackIceEngine\BlackIceEngine\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -67,34 +68,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Helpers.h" />
-    <ClInclude Include="IniFile.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="Keys.h" />
-    <ClInclude Include="Main.h" />
-    <ClInclude Include="MainGame.h" />
-    <ClInclude Include="Screen.h" />
-    <ClInclude Include="ScreenManager.h" />
-    <ClInclude Include="TestScreen.h" />
-    <ClInclude Include="Texture.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="Vector2f.h" />
+    <ClInclude Include="Headers\Engine\Graphics\Camera.h" />
+    <ClInclude Include="Headers\Engine\Game.h" />
+    <ClInclude Include="Headers\Engine\GUI\GUI_Button.h" />
+    <ClInclude Include="Headers\Engine\Helpers\Helpers.h" />
+    <ClInclude Include="Headers\Engine\Helpers\IniFile.h" />
+    <ClInclude Include="Headers\Engine\Helpers\InputManager.h" />
+    <ClInclude Include="Headers\Engine\Helpers\Keys.h" />
+    <ClInclude Include="Headers\Engine\Main.h" />
+    <ClInclude Include="Headers\Engine\MainGame.h" />
+    <ClInclude Include="Headers\Engine\Helpers\MouseButtons.h" />
+    <ClInclude Include="Headers\Engine\Screens\Screen.h" />
+    <ClInclude Include="Headers\Engine\Screens\ScreenManager.h" />
+    <ClInclude Include="Headers\Engine\Screens\TestScreen.h" />
+    <ClInclude Include="Headers\Engine\Graphics\Texture.h" />
+    <ClInclude Include="Headers\Engine\Helpers\Timer.h" />
+    <ClInclude Include="Headers\Engine\Helpers\Vector2f.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Helpers.cpp" />
-    <ClCompile Include="InputManager.cpp" />
-    <ClCompile Include="MainApplication.cpp" />
-    <ClCompile Include="MainGame.cpp" />
-    <ClCompile Include="Screen.cpp" />
-    <ClCompile Include="ScreenManager.cpp" />
-    <ClCompile Include="TestScreen.cpp" />
-    <ClCompile Include="Texture.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Vector2f.cpp" />
+    <ClCompile Include="Source\Engine\Graphics\Camera.cpp" />
+    <ClCompile Include="Source\Engine\Game.cpp" />
+    <ClCompile Include="Source\Engine\GUI\GUI_Button.cpp" />
+    <ClCompile Include="Source\Engine\Helpers\Helpers.cpp" />
+    <ClCompile Include="Source\Engine\Helpers\InputManager.cpp" />
+    <ClCompile Include="Source\MainApplication.cpp" />
+    <ClCompile Include="Source\Engine\MainGame.cpp" />
+    <ClCompile Include="Source\Engine\Screens\Screen.cpp" />
+    <ClCompile Include="Source\Engine\Screens\ScreenManager.cpp" />
+    <ClCompile Include="Source\Engine\Screens\TestScreen.cpp" />
+    <ClCompile Include="Source\Engine\Graphics\Texture.cpp" />
+    <ClCompile Include="Source\Engine\Helpers\Timer.cpp" />
+    <ClCompile Include="Source\Engine\Helpers\Vector2f.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

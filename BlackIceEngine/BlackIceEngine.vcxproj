@@ -72,6 +72,7 @@
     <ClInclude Include="Headers\Engine\Game.h" />
     <ClInclude Include="Headers\Engine\GUI\GUI_Button.h" />
     <ClInclude Include="Headers\Engine\Helpers\Helpers.h" />
+    <ClInclude Include="Headers\Engine\Interfaces\ICallback.h" />
     <ClInclude Include="Headers\Engine\Helpers\IniFile.h" />
     <ClInclude Include="Headers\Engine\Helpers\InputManager.h" />
     <ClInclude Include="Headers\Engine\Helpers\Keys.h" />

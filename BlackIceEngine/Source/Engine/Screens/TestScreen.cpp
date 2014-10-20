@@ -3,8 +3,6 @@
 TestScreen::TestScreen()
 	: Screen()
 {
-	std::stringstream str;
-
 	buttonSelection.Load_From_File( "Resources\\Textures\\GUI\\buttonSelection.png" );
 	playButton.Load_From_File( "Resources\\Textures\\GUI\\playButton.png" );
 	quitButton.Load_From_File( "Resources\\Textures\\GUI\\quitButton.png" );
@@ -13,7 +11,7 @@ TestScreen::TestScreen()
 	Texture* testBtnTx = new Texture();
 	Texture* testBtnTx_a = new Texture();
 	Texture* testBtnTx_h = new Texture();
-
+	
 	testBtnTx->Load_From_File( "Resources\\Textures\\GUI\\testButton_n.png" );
 	testBtnTx_a->Load_From_File( "Resources\\Textures\\GUI\\testButton_a.png" );
 	testBtnTx_h->Load_From_File( "Resources\\Textures\\GUI\\testButton_h.png" );
@@ -23,6 +21,7 @@ TestScreen::TestScreen()
 	testButton = new GUI_Button( testBtnTx, Vector2f( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ), 120 ), btnRect );
 	testButton->SetTextureA( testBtnTx_a );
 	testButton->SetTextureH( testBtnTx_h );
+	testButton->SetClickedCallback( TestFunc );
 
 	//TODO: Add new screen to transition to from Play button
 	selectionIndex = 0;
@@ -30,8 +29,8 @@ TestScreen::TestScreen()
 
 TestScreen::~TestScreen()
 {
-	delete testButton;
 	Screen::~Screen();
+	delete testButton;
 }
 
 void TestScreen::Update( int ticks )
@@ -101,5 +100,10 @@ void TestScreen::Render()
 	buttonSelection.Render(
 		Vector2f( float( centerX - ( buttonSelection.GetWidth() / 2 ) ), float( centerY + y ) ) );
 
-	testButton->Render();	
+	testButton->Render();
+}
+
+void TestScreen::TestFunc()
+{
+	OutputDebugString( "This is my callback function!\n" );
 }

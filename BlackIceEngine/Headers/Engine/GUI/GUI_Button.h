@@ -10,7 +10,6 @@ typedef enum
 
 class GUI_Button
 {
-	
 private:
 	Texture* texture;	/* Texture for button */
 	Texture* texture_h; /* Texture for when hovering/highlighting button */
@@ -18,8 +17,7 @@ private:
 	Vector2f position;
 	SDL_Rect buttonRect;
 	GUI_ButtonState buttonState; /* Current state of button; whether it's highlighted, activated, or not */
-//#define ACTIVATE_TIME = 30; /* Number of miliseconds */
-	static const int ACTIVATE_TIME;
+	static const int ACTIVATE_TIME; /* Number of miliseconds */
 	Timer activateTimer;
 
 public:
@@ -28,6 +26,9 @@ public:
 	~GUI_Button();
 	void SetTextureH( Texture* texture );
 	void SetTextureA( Texture* texture );
+	
+	// TODO Create callback function to be called when GUI Button is clicked	
+
 	void Render();
 	bool MouseHovering();
 	bool MouseActivating( MouseButton mouseButton );

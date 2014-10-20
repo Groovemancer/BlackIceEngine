@@ -22,7 +22,9 @@ GUI_Button::~GUI_Button()
 	texture_h->Free();
 	texture_a->Free();
 
-	delete texture, texture_h, texture_a;
+	delete texture;
+	delete texture_h;
+	delete texture_a;
 }
 
 bool GUI_Button::MouseHovering()
@@ -54,7 +56,9 @@ bool GUI_Button::MouseActivating( MouseButton button )
 	{
 		buttonState = GUI_ButtonState::Activated;
 		activateTimer.Start();
-		OutputDebugString( "Activating Button!" );
+		OutputDebugString( "Activating Button!\n" );
+
+		// TODO: Callback function will be called here upon clicking the GUI Button
 		return true;
 	}
 	return false;
@@ -95,4 +99,3 @@ void GUI_Button::Render()
 		texture->Render( position, Vector2f(), 0, 1, NULL );
 	}
 }
-

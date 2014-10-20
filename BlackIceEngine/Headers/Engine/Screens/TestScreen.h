@@ -19,6 +19,7 @@ public:
 	~TestScreen();
 	void Update( int ticks );
 	void Render();
+	void TestFunc();
 };
 
 #endif /* INC_TESTSCREEN_H */

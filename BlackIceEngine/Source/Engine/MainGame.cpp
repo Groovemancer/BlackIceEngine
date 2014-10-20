@@ -31,7 +31,7 @@ void MainGame::Quit()
 {
 	game.screenManager.CleanUp();
 	quit = true;
-	OutputDebugString( "Quit\n" );
+	OutputDebugString( "Quiting...\n" );
 }
 
 bool MainGame::LoadFiles()
@@ -50,6 +50,9 @@ void MainGame::GameLoop()
 		quit = InputManager::Update();
 		
 		game.screenManager.Update( delta.Get_Ticks() );
+
+		if ( quit )
+			break;
 		
 		// Restart delta timer
 		delta.Start();

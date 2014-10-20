@@ -9,7 +9,7 @@ protected:
 	Screen* nextScreen;
 public:
 	Screen();
-	~Screen();
+	virtual ~Screen();
 	virtual void Update( int ticks );
 	virtual void Render();
 	bool IsFinished();

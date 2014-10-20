@@ -8,6 +8,7 @@
 #include <GL/GLU.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
+#include "Interfaces\ICallback.h"
 #include "Engine\Helpers\IniFile.h"
 #include "Engine\MainGame.h"
 #include "Engine\Game.h"
@@ -26,6 +27,6 @@
 #include <cmath>
 #include <vector>
 #include <map>
-#include <vld.h>
+#include <vld.h>	/* Memory Leak Detector */
 
 #endif /* INC_MAIN_H */

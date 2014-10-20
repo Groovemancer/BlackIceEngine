@@ -1,18 +1,68 @@
-﻿  GUI_Button.cpp
+﻿  TestScreen.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(21): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(24): error C3867: 'TestScreen::TestFunc': function call missing argument list; use '&TestScreen::TestFunc' to create a pointer to member
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(38): warning C4482: nonstandard extension used: enum 'Key' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(46): warning C4482: nonstandard extension used: enum 'Key' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(54): warning C4482: nonstandard extension used: enum 'Key' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(55): warning C4482: nonstandard extension used: enum 'Key' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(70): warning C4482: nonstandard extension used: enum 'Key' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\screens\testscreen.cpp(79): warning C4482: nonstandard extension used: enum 'MouseButton' used in qualified name
+  MainGame.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+x:\game development\code\blackiceengine\blackiceengine\source\engine\maingame.cpp(39): error C2259: 'TestScreen' : cannot instantiate abstract class
+          due to following members:
+          'bool ICallback::operator ()(void) const' : is abstract
+          x:\game development\code\blackiceengine\blackiceengine\headers\engine\interfaces\icallback.h(3) : see declaration of 'ICallback::operator ()'
+  GUI_Button.cpp
 x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
           x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
 x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(8): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
 x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(16): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(36): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(37): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(41): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(38): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(39): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
 x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(43): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(51): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(55): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(75): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(81): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(85): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(89): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
-  LINK : X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe not found or not built by the last incremental link; performing full link
-MSVCRTD.lib(cinitexe.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
-  BlackIceEngine.vcxproj -> X:\Game Development\Code\BlackIceEngine\Debug\BlackIceEngine.exe
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(45): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(53): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(57): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(62): error C2064: term does not evaluate to a function taking 0 arguments
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(80): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(86): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(90): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+x:\game development\code\blackiceengine\blackiceengine\source\engine\gui\gui_button.cpp(94): warning C4482: nonstandard extension used: enum 'GUI_ButtonState' used in qualified name
+  Generating Code...
+  Compiling...
+  Game.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+x:\game development\code\blackiceengine\blackiceengine\source\engine\game.cpp(65): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+x:\game development\code\blackiceengine\blackiceengine\source\engine\game.cpp(65): warning C4244: 'argument' : conversion from 'float' to 'GLint', possible loss of data
+  Generating Code...
+  Compiling...
+  MainApplication.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  ScreenManager.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Screen.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Vector2f.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Timer.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  InputManager.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Helpers.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Texture.cpp
+x:\gamedev\libs\sdl2-2.0.3\include\sdl_opengl.h(36): warning C4005: 'WIN32_LEAN_AND_MEAN' : macro redefinition
+          x:\gamedev\libs\freeglut\include\gl\freeglut_std.h(58) : see previous definition of 'WIN32_LEAN_AND_MEAN'
+  Generating Code...

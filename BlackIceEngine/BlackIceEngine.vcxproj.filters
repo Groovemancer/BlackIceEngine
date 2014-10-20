@@ -93,6 +93,9 @@
     <ClInclude Include="Headers\Engine\Helpers\MouseButtons.h">
       <Filter>Header Files\Engine\Helpers</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Engine\Interfaces\ICallback.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\MainApplication.cpp">

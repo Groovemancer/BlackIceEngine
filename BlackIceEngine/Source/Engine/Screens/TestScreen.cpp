@@ -18,10 +18,11 @@ TestScreen::TestScreen()
 	
 	SDL_Rect btnRect = { 0, 0, 192, 96 };
 
-	testButton = new GUI_Button( testBtnTx, Vector2f( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ), 120 ), btnRect );
+	testButton = new GUI_Button( testBtnTx, Vector2f( float( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ) ), 120 ), btnRect );
 	testButton->SetTextureA( testBtnTx_a );
 	testButton->SetTextureH( testBtnTx_h );
-	testButton->SetClickedCallback( TestFunc );
+	std::function< void() > callback = std::bind( &TestScreen::TestFunc, this );
+	testButton->SetClickedCallback( callback );
 
 	//TODO: Add new screen to transition to from Play button
 	selectionIndex = 0;

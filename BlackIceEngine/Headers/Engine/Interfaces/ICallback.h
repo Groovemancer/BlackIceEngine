@@ -1,4 +1,5 @@
 class ICallback
 {
-	virtual bool operator()() const = 0;
+	virtual void call() = 0;
+	virtual ~ICallback() {}
 };

@@ -58,6 +58,8 @@ bool GUI_Button::MouseActivating( MouseButton button )
 		activateTimer.Start();
 		OutputDebugString( "Activating Button!\n" );
 
+		clickedCallback();
+
 		// TODO: Callback function will be called here upon clicking the GUI Button
 		return true;
 	}
@@ -72,6 +74,11 @@ void GUI_Button::SetTextureH( Texture* txt )
 void GUI_Button::SetTextureA( Texture* txt )
 {
 	texture_a = txt;
+}
+
+void GUI_Button::SetClickedCallback( std::function< void() > callback )
+{
+	clickedCallback = callback;
 }
 
 void GUI_Button::Render()

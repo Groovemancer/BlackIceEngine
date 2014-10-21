@@ -27,6 +27,7 @@
 #include <cmath>
 #include <vector>
 #include <map>
+#include <functional>
 #include <vld.h>	/* Memory Leak Detector */
 
 #endif /* INC_MAIN_H */

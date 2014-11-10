@@ -19,7 +19,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v100</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>X:\Program Files %28x86%29\Visual Leak Detector\include;X:\gamedev\libs\freeglut\include;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\include;X:\gamedev\libs\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>X:\gamedev\libs\boost_1_56_0;X:\Program Files %28x86%29\Visual Leak Detector\include;X:\gamedev\libs\freeglut\include;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\include;X:\gamedev\libs\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>X:\Program Files %28x86%29\Visual Leak Detector\lib\Win32;X:\gamedev\libs\DevIL-SDK-x86-1.7.8\lib;X:\gamedev\libs\freeglut\lib;X:\gamedev\libs\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
@@ -49,6 +49,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>X:\Game Development\Code\BlackIceEngine\BlackIceEngine\Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -73,6 +74,7 @@
     <ClInclude Include="Headers\Engine\Graphics\Camera.h" />
     <ClInclude Include="Headers\Engine\Game.h" />
     <ClInclude Include="Headers\Engine\GUI\GUI_Button.h" />
+    <ClInclude Include="Headers\Engine\Helpers\GameKeys.h" />
     <ClInclude Include="Headers\Engine\Helpers\Helpers.h" />
     <ClInclude Include="Headers\Engine\Interfaces\ICallback.h" />
     <ClInclude Include="Headers\Engine\Helpers\IniFile.h" />
@@ -92,6 +94,7 @@
     <ClCompile Include="Source\Engine\Graphics\Camera.cpp" />
     <ClCompile Include="Source\Engine\Game.cpp" />
     <ClCompile Include="Source\Engine\GUI\GUI_Button.cpp" />
+    <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp" />
     <ClCompile Include="Source\Engine\Helpers\Helpers.cpp" />
     <ClCompile Include="Source\Engine\Helpers\InputManager.cpp" />
     <ClCompile Include="Source\MainApplication.cpp" />

@@ -96,6 +96,9 @@
     <ClInclude Include="Headers\Engine\Interfaces\ICallback.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Engine\Helpers\GameKeys.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\MainApplication.cpp">
@@ -136,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="Source\Engine\Screens\TestScreen.cpp">
       <Filter>Source Files\Engine\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

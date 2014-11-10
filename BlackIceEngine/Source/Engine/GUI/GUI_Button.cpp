@@ -5,7 +5,7 @@ const int GUI_Button::ACTIVATE_TIME = 120;
 GUI_Button::GUI_Button()
 {
 	GUI_Button::position = Vector2f();
-	buttonState = GUI_ButtonState::Normal;
+	buttonState = NORMAL;
 }
 
 GUI_Button::GUI_Button( Texture* txt, Vector2f position, SDL_Rect buttonRect )
@@ -13,7 +13,7 @@ GUI_Button::GUI_Button( Texture* txt, Vector2f position, SDL_Rect buttonRect )
 	GUI_Button::texture = txt;
 	GUI_Button::position = position;
 	GUI_Button::buttonRect = buttonRect;
-	buttonState = GUI_ButtonState::Normal;
+	buttonState = NORMAL;
 }
 
 GUI_Button::~GUI_Button()
@@ -34,15 +34,15 @@ bool GUI_Button::MouseHovering()
 	if ( mousePos.x >= position.x && mousePos.y >= position.y &&
 		mousePos.x < ( position.x + buttonRect.w ) && mousePos.y < ( position.y + buttonRect.h ) )
 	{
-		// If button is Activated, don't set the button state to Highlighted
-		if ( buttonState != GUI_ButtonState::Activated )
-			buttonState = GUI_ButtonState::Highlighted;
+		// If button is ACTIVATED, don't set the button state to HIGHLIGHTED
+		if ( buttonState != ACTIVATED )
+			buttonState = HIGHLIGHTED;
 		return true;
 	}
 
-	if ( buttonState != GUI_ButtonState::Activated )
+	if ( buttonState != ACTIVATED )
 	{
-		buttonState = GUI_ButtonState::Normal;
+		buttonState = NORMAL;
 	}
 
 	return false;
@@ -50,17 +50,16 @@ bool GUI_Button::MouseHovering()
 
 bool GUI_Button::MouseActivating( MouseButton button )
 {
-	if ( buttonState == GUI_ButtonState::Activated ) return false; // Already activated, return false
+	if ( buttonState == ACTIVATED ) return false; // Already activated, return false
 
 	if ( MouseHovering() && InputManager::IsMouseButtonDown( button ) )
 	{
-		buttonState = GUI_ButtonState::Activated;
+		buttonState = ACTIVATED;
 		activateTimer.Start();
 		OutputDebugString( "Activating Button!\n" );
 
+		// Callback function is called here. Currently only setup to work with void functions.
 		clickedCallback();
-
-		// TODO: Callback function will be called here upon clicking the GUI Button
 		return true;
 	}
 	return false;
@@ -76,28 +75,20 @@ void GUI_Button::SetTextureA( Texture* txt )
 	texture_a = txt;
 }
 
-void GUI_Button::SetClickedCallback( std::function< void() > callback )
-{
-	clickedCallback = callback;
-}
-
 void GUI_Button::Render()
 {
-	if ( buttonState == GUI_ButtonState::Activated &&
+	if ( buttonState == ACTIVATED &&
 		activateTimer.Get_Ticks() > ACTIVATE_TIME )
 	{
-		std::stringstream str;
-		str << "Activate Timer: " << activateTimer.Get_Ticks() << "\n";
-		OutputDebugString( str.str().c_str() );
-		buttonState = GUI_ButtonState::Normal;
+		buttonState = NORMAL;
 		activateTimer.Stop();
 	}
 
-	if ( texture_a != NULL && buttonState == GUI_ButtonState::Activated )
+	if ( texture_a != NULL && buttonState == ACTIVATED )
 	{
 		texture_a->Render( position );
 	}
-	else if ( texture_h != NULL && buttonState == GUI_ButtonState::Highlighted )
+	else if ( texture_h != NULL && buttonState == HIGHLIGHTED )
 	{
 		texture_h->Render( position );
 	}

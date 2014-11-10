@@ -3,11 +3,15 @@
 
 #include <SDL.h>
 #include <SDL_image.h>
+#include <SDL_opengl.h>
 #include <GL/freeglut.h>
 #include <GL/GL.h>
 #include <GL/GLU.h>
 #include <IL/il.h>
 #include <IL/ilu.h>
+#include <boost\function.hpp>
+#include <boost\bind.hpp>
+#include "Helpers\GameKeys.h"
 #include "Interfaces\ICallback.h"
 #include "Engine\Helpers\IniFile.h"
 #include "Engine\MainGame.h"
@@ -27,7 +31,6 @@
 #include <cmath>
 #include <vector>
 #include <map>
-#include <functional>
 #include <vld.h>	/* Memory Leak Detector */
 
 #endif /* INC_MAIN_H */

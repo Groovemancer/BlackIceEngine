@@ -1,4 +1,7 @@
 #include "Engine\Main.h"
+#include "Engine\Helpers\Keys.h"
+#include <boost\property_tree\ptree.hpp>
+#include <boost\property_tree\ini_parser.hpp>
 
 Camera Game::camera;
 ScreenManager Game::screenManager;
@@ -62,7 +65,7 @@ bool Game::Init_GL()
 	GLenum error = GL_NO_ERROR;
 
 	// Set the viewport
-	glViewport( 0.f, 0.f, screenWidth, screenHeight );
+	glViewport( 0, 0, screenWidth, screenHeight );
 
 	// Initialize Projection Matrix
 	glMatrixMode( GL_PROJECTION );
@@ -164,6 +167,21 @@ bool Game::ReadConfigFile()
 	// Set default dimensions, in case reading/writing to/from a config file doesn't work
 	screenWidth = 800;
 	screenHeight = 600;
+
+	boost::property_tree::ptree pt;
+	boost::property_tree::ini_parser::read_ini( "config.ini", pt );
+
+	screenWidth = pt.get< int >( "Display.screenWidth" );
+	screenHeight = pt.get< int >( "Display.screenHeight" );
+	
+	GameKeys::MenuConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuConfirmKey" ) );
+	GameKeys::MenuAltConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuAltConfirmKey" ) );
+	GameKeys::MenuDownKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuDownKey" ) );
+	GameKeys::MenuUpKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuUpKey" ) );
+
+	// Outdated stuff below...
+
+	/*
 	try
 	{
 		std::ifstream input( "config.ini" );
@@ -173,8 +191,18 @@ bool Game::ReadConfigFile()
 			INIFile config( "config.ini", true, false );
 			config[ "Display" ][ "screenWidth" ] = "800";
 			config[ "Display" ][ "screenHeight" ] = "600";
-			screenWidth = 800;
-			screenHeight = 600;
+						
+			char str[16];
+			int i = int( GameKeys::MenuConfirmKey );
+			config[ "Keybindings" ][ "menuConfirmKey" ] = itoa( i, str, 10 );
+
+			char str2[16];
+			int i2 = int( GameKeys::MenuDownKey );
+			config[ "Keybindings" ][ "menuDownKey" ] = itoa( i2, str2, 10 );
+
+			char str3[16];
+			int i3 = int( GameKeys::MenuUpKey );
+			config[ "Keybindings" ][ "menuUpKey" ] = itoa( i3, str3, 10 );
 		}
 		else
 		{
@@ -182,6 +210,9 @@ bool Game::ReadConfigFile()
 			INIFile config( "config.ini", true, true );
 			screenWidth = atoi( config[ "Display" ][ "screenWidth" ].c_str() );
 			screenHeight = atoi( config[ "Display" ][ "screenHeight" ].c_str() );
+			GameKeys::MenuConfirmKey = Key( atoi( config[ "Keybindings" ][ "menuConfirmKey" ].c_str() ) );
+			GameKeys::MenuDownKey = Key( atoi( config[ "Keybindings" ][ "menuDownKey" ].c_str() ) );
+			GameKeys::MenuUpKey = Key( atoi( config[ "Keybindings" ][ "menuUpKey" ].c_str() ) );
 		}
 		return true;
 	}
@@ -190,6 +221,8 @@ bool Game::ReadConfigFile()
 		std::cout << "Exception raised: " << str << "\n";
 		return false;
 	}
+	*/
+	return true;
 }
 
 int Game::GetWidth()

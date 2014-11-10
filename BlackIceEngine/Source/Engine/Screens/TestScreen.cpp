@@ -21,10 +21,10 @@ TestScreen::TestScreen()
 	testButton = new GUI_Button( testBtnTx, Vector2f( float( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ) ), 120 ), btnRect );
 	testButton->SetTextureA( testBtnTx_a );
 	testButton->SetTextureH( testBtnTx_h );
-	std::function< void() > callback = std::bind( &TestScreen::TestFunc, this );
+	boost::function< void() > callback = boost::bind( &TestScreen::TestFunc, this );
 	testButton->SetClickedCallback( callback );
 
-	//TODO: Add new screen to transition to from Play button
+	// TODO: Add new screen to transition to from Play button
 	selectionIndex = 0;
 }
 
@@ -36,7 +36,7 @@ TestScreen::~TestScreen()
 
 void TestScreen::Update( int ticks )
 {
-	if ( InputManager::IsKeyDown( Key::KEY_DOWN ) )
+	if ( InputManager::IsKeyDown( GameKeys::MenuDownKey ) )
 	{
 		selectionIndex++;
 		if ( selectionIndex >= BUTTON_COUNT )
@@ -44,7 +44,7 @@ void TestScreen::Update( int ticks )
 			selectionIndex = 0;
 		}
 	}
-	if ( InputManager::IsKeyDown( Key::KEY_UP ) )
+	if ( InputManager::IsKeyDown( GameKeys::MenuUpKey ) )
 	{
 		selectionIndex--;
 		if ( selectionIndex < 0 )
@@ -52,8 +52,8 @@ void TestScreen::Update( int ticks )
 			selectionIndex = BUTTON_COUNT - 1;
 		}
 	}
-	if ( InputManager::IsKeyDown( Key::KEY_SPACE ) ||
-		InputManager::IsKeyDown( Key::KEY_RETURN ) )
+	if ( InputManager::IsKeyDown( GameKeys::MenuConfirmKey ) ||
+		InputManager::IsKeyDown( GameKeys::MenuAltConfirmKey ) )
 	{
 		if ( selectionIndex == 0 )
 		{
@@ -68,16 +68,20 @@ void TestScreen::Update( int ticks )
 		}
 	}
 
-	if ( InputManager::IsKeyDown( Key::KEY_f ) )
+	if ( InputManager::IsKeyDown( KEY_f ) )
 	{
-		// Check for memory leaks
+		std::stringstream str;
+		str << "Confirm Key: " << GameKeys::MenuConfirmKey << "\n";
+		str << "Up Key: " << GameKeys::MenuUpKey << "\n";
+		str << "Down Key: " << GameKeys::MenuDownKey << "\n";
+		OutputDebugString( str.str().c_str() );
 	}
 
 	if ( testButton->MouseHovering() )
 	{
 		// Do something when hovering it
 	}
-	if ( testButton->MouseActivating( MouseButton::MOUSE_BUTTON_LEFT ) )
+	if ( testButton->MouseActivating( MOUSE_BUTTON_LEFT ) )
 	{
 		// Do something when left clicking on it
 		OutputDebugString( "Left clicked the button!\n" );

@@ -1,13 +1,11 @@
 #ifndef INC_GUI_BUTTON_H
 #define INC_GUI_BUTTON_H
 
-#include <functional>
-
 typedef enum
 {
-	Normal,
-	Highlighted,
-	Activated,
+	NORMAL,
+	HIGHLIGHTED,
+	ACTIVATED,
 } GUI_ButtonState;
 
 class GUI_Button
@@ -22,7 +20,7 @@ private:
 	static const int ACTIVATE_TIME; /* Number of miliseconds */
 	Timer activateTimer;
 	
-	std::function< void() > clickedCallback;
+	boost::function<void()> clickedCallback;
 
 public:
 	GUI_Button();
@@ -31,8 +29,8 @@ public:
 	void SetTextureH( Texture* texture );
 	void SetTextureA( Texture* texture );
 	
-	// TODO Create callback function to be called when GUI Button is clicked
-	void SetClickedCallback( std::function< void() > callback );
+	// TODO: Create callback function to be called when GUI Button is clicked
+	void SetClickedCallback( boost::function<void()> callback ) { clickedCallback = callback; }
 
 	void Render();
 	bool MouseHovering();

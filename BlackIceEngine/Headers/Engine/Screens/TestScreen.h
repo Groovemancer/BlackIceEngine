@@ -12,14 +12,14 @@ private:
 	Texture background;	
 	int selectionIndex;
 	static const int BUTTON_COUNT = 2;
+	GUI_Skin* guiSkin;
 	GUI_Button* testButton;
-	
 public:
 	TestScreen();
 	~TestScreen();
 	void Update( int ticks );
 	void Render();
-	void TestFunc();
+	void QuitGame();
 };
 
 #endif /* INC_TESTSCREEN_H */

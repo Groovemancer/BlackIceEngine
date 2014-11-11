@@ -22,6 +22,7 @@
 #include "Helpers\Vector2f.h"
 #include "Graphics\Texture.h"
 #include "Graphics\Camera.h"
+#include "GUI\GUI_Skin.h"
 #include "GUI\GUI_Button.h"
 #include "Screens\Screen.h"
 #include "Screens\ScreenManager.h"

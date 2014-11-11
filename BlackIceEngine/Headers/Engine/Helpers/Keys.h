@@ -6,7 +6,8 @@
 #include <boost\bimap.hpp>
 
 /* Maps all keys to sdl keys */
-typedef enum {	
+typedef enum
+{	
 	KEY_UNKNOWN		= SDLK_UNKNOWN,
 	KEY_BACKSPACE	= SDLK_BACKSPACE,
 	KEY_TAB			= SDLK_TAB,

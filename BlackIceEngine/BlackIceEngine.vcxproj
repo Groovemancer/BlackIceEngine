@@ -74,6 +74,7 @@
     <ClInclude Include="Headers\Engine\Graphics\Camera.h" />
     <ClInclude Include="Headers\Engine\Game.h" />
     <ClInclude Include="Headers\Engine\GUI\GUI_Button.h" />
+    <ClInclude Include="Headers\Engine\GUI\GUI_Skin.h" />
     <ClInclude Include="Headers\Engine\Helpers\GameKeys.h" />
     <ClInclude Include="Headers\Engine\Helpers\Helpers.h" />
     <ClInclude Include="Headers\Engine\Interfaces\ICallback.h" />
@@ -94,6 +95,7 @@
     <ClCompile Include="Source\Engine\Graphics\Camera.cpp" />
     <ClCompile Include="Source\Engine\Game.cpp" />
     <ClCompile Include="Source\Engine\GUI\GUI_Button.cpp" />
+    <ClCompile Include="Source\Engine\GUI\GUI_Skin.cpp" />
     <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp" />
     <ClCompile Include="Source\Engine\Helpers\Helpers.cpp" />
     <ClCompile Include="Source\Engine\Helpers\InputManager.cpp" />

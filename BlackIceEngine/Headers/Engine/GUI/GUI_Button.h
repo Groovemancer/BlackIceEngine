@@ -11,6 +11,7 @@ typedef enum
 class GUI_Button
 {
 private:
+	GUI_Skin* guiSkin; /* Creates button from skin instead of from regular textures */
 	Texture* texture;	/* Texture for button */
 	Texture* texture_h; /* Texture for when hovering/highlighting button */
 	Texture* texture_a; /* Texture for when activating button */
@@ -25,6 +26,7 @@ private:
 public:
 	GUI_Button();
 	GUI_Button( Texture* texture, Vector2f position, SDL_Rect buttonRect );
+	GUI_Button( GUI_Skin* guiSkin, Vector2f position, SDL_Rect buttonRect );
 	~GUI_Button();
 	void SetTextureH( Texture* texture );
 	void SetTextureA( Texture* texture );

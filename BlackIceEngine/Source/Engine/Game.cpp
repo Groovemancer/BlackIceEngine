@@ -40,6 +40,8 @@ bool Game::Initialize()
 		}
 		else
 		{
+			SetFullscreen( windowState );
+
 			// Create context
 			context = SDL_GL_CreateContext( window );
 			if ( context == NULL )
@@ -130,6 +132,22 @@ void Game::Set_Window_Title( std::string title )
 	SDL_SetWindowTitle( window, title.c_str() );
 }
 
+void Game::SetFullscreen( int windowState )
+{
+	if ( windowState == 1 )
+	{
+		SDL_SetWindowFullscreen( window, SDL_WINDOW_FULLSCREEN );
+	}
+	else if ( windowState == 2 )
+	{
+		SDL_SetWindowFullscreen( window, SDL_WINDOW_FULLSCREEN_DESKTOP );
+	}
+	else
+	{
+		SDL_SetWindowFullscreen( window, 0 );
+	}
+}
+
 void Game::Clean_Up()
 {
 	//Destroy window
@@ -168,11 +186,15 @@ bool Game::ReadConfigFile()
 	screenWidth = 800;
 	screenHeight = 600;
 
+	// Default window state is windowed
+	windowState = 0;
+
 	boost::property_tree::ptree pt;
 	boost::property_tree::ini_parser::read_ini( "config.ini", pt );
 
 	screenWidth = pt.get< int >( "Display.screenWidth" );
 	screenHeight = pt.get< int >( "Display.screenHeight" );
+	windowState = pt.get< int >( "Display.fullscreen" );
 	
 	GameKeys::MenuConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuConfirmKey" ) );
 	GameKeys::MenuAltConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuAltConfirmKey" ) );

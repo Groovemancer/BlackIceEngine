@@ -7,7 +7,10 @@ TestScreen::TestScreen()
 	playButton.Load_From_File( "Resources\\Textures\\GUI\\playButton.png" );
 	quitButton.Load_From_File( "Resources\\Textures\\GUI\\quitButton.png" );
 	background.Load_From_File( "Resources\\Textures\\mainMenuBackground.png" );
+
+	guiSkin = new GUI_Skin();
 	
+	/*
 	Texture* testBtnTx = new Texture();
 	Texture* testBtnTx_a = new Texture();
 	Texture* testBtnTx_h = new Texture();
@@ -15,13 +18,14 @@ TestScreen::TestScreen()
 	testBtnTx->Load_From_File( "Resources\\Textures\\GUI\\testButton_n.png" );
 	testBtnTx_a->Load_From_File( "Resources\\Textures\\GUI\\testButton_a.png" );
 	testBtnTx_h->Load_From_File( "Resources\\Textures\\GUI\\testButton_h.png" );
+	*/
 	
 	SDL_Rect btnRect = { 0, 0, 192, 96 };
 
-	testButton = new GUI_Button( testBtnTx, Vector2f( float( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ) ), 120 ), btnRect );
-	testButton->SetTextureA( testBtnTx_a );
-	testButton->SetTextureH( testBtnTx_h );
-	boost::function< void() > callback = boost::bind( &TestScreen::TestFunc, this );
+	testButton = new GUI_Button( guiSkin, Vector2f( float( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ) ), 120 ), btnRect );
+	//testButton->SetTextureA( testBtnTx_a );
+	//testButton->SetTextureH( testBtnTx_h );
+	boost::function< void() > callback = boost::bind( &TestScreen::QuitGame, this );
 	testButton->SetClickedCallback( callback );
 
 	// TODO: Add new screen to transition to from Play button
@@ -30,6 +34,8 @@ TestScreen::TestScreen()
 
 TestScreen::~TestScreen()
 {
+	delete guiSkin;
+
 	Screen::~Screen();
 	delete testButton;
 }
@@ -90,6 +96,7 @@ void TestScreen::Update( int ticks )
 
 void TestScreen::Render()
 {
+	background.Stretch( Game::GetWidth(), Game::GetHeight() );
 	background.Render( Vector2f( 0, 0 ) );
 
 	int centerX = Game::GetWidth() / 2;
@@ -108,7 +115,8 @@ void TestScreen::Render()
 	testButton->Render();
 }
 
-void TestScreen::TestFunc()
+void TestScreen::QuitGame()
 {
-	OutputDebugString( "This is my callback function!\n" );
+	OutputDebugString( "Test?" );
+	//MainGame::Quit();
 }

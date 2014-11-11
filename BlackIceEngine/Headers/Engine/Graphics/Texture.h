@@ -15,6 +15,8 @@ private:
 
 	GLuint width;
 	GLuint height;
+	int stretchWidth;
+	int stretchHeight;
 	void Set_Size();
 public:
 	Texture();
@@ -23,6 +25,9 @@ public:
 	bool Load_From_Pixels( GLuint* pixels, GLuint width, GLuint height );
 	void Apply_Colorkey( Uint32 colorKey );
 	void Free();
+	void Stretch( int w, int h ) { stretchWidth = w; stretchHeight = h; }
+	void StretchWidth( int w ) { stretchWidth = w; }
+	void StretchHeight( int h ) { stretchHeight = h; }
 	void Render( Vector2f position, Vector2f origin = Vector2f::Zero(), float rotation = 0, float scale = 1, SDL_Rect* frameRect = NULL );
 	GLuint GetID();
 	int GetWidth();

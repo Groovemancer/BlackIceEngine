@@ -16,6 +16,9 @@ private:
 
 	bool Init_GL();
 	bool ReadConfigFile();
+
+	/// Windowed = 0, Fullscreen = 1, Borderless Window = 2
+	int windowState;
 public:
 	// The camera that determines what we're rendering to the screen
 	static Camera camera;
@@ -33,6 +36,7 @@ public:
 	void Update_Screen();
 	bool Initialize();
 	void Set_Window_Title( std::string title );
+	void SetFullscreen( int windowState );
 	void Clean_Up();
 	static int GetWidth();
 	static int GetHeight();

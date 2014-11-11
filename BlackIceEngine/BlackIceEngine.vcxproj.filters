@@ -99,6 +99,9 @@
     <ClInclude Include="Headers\Engine\Helpers\GameKeys.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Engine\GUI\GUI_Skin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\MainApplication.cpp">
@@ -141,6 +144,9 @@
       <Filter>Source Files\Engine\Screens</Filter>
     </ClCompile>
     <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\GUI\GUI_Skin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

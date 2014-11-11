@@ -67,6 +67,8 @@ bool Texture::Load_From_Pixels( GLuint* pixels, GLuint width, GLuint height )
 	// Get texture dimensions
 	Texture::width = width;
 	Texture::height = height;
+	Texture::stretchWidth = width;
+	Texture::stretchHeight = height;
 	
 	// Generate texture ID
 	glGenTextures( 1, &textureID );
@@ -153,7 +155,7 @@ void Texture::Render( Vector2f position, Vector2f origin, float rotation, float 
 			frameY1 = float( frameRect->y ) / float( Texture::height );
 			frameY2 = frameY1 + frameYdivision;
 		}
-
+		
 		glBegin( GL_QUADS );
 			// Bottom-left vertex (corner)
 			glTexCoord2f( frameX1, frameY1 );
@@ -161,15 +163,15 @@ void Texture::Render( Vector2f position, Vector2f origin, float rotation, float 
 
 			// Bottom-right vertex (corner)
 			glTexCoord2f( frameX2, frameY1 );
-			glVertex2f( (GLfloat)Texture::width, 0.f );
+			glVertex2f( (GLfloat)Texture::stretchWidth, 0.f );
 
 			// Top-right vertex (corner)
 			glTexCoord2f( frameX2, frameY2 );
-			glVertex2f( (GLfloat)Texture::width, (GLfloat)Texture::height );
+			glVertex2f( (GLfloat)Texture::stretchWidth, (GLfloat)Texture::stretchHeight );
 
 			// Top-left vertex (corner)
 			glTexCoord2f( frameX1, frameY2 );
-			glVertex2f( 0.f, (GLfloat)Texture::height );
+			glVertex2f( 0.f, (GLfloat)Texture::stretchHeight );
 		glEnd();
 
 		// Disable blending
@@ -177,6 +179,10 @@ void Texture::Render( Vector2f position, Vector2f origin, float rotation, float 
 
 		// Enable Depth Testing
 		glEnable( GL_DEPTH_TEST );
+
+		// Reset texture stretching width/height
+		Texture::stretchWidth = Texture::width;
+		Texture::stretchHeight = Texture::height;
 	}
 }
 

@@ -22,6 +22,7 @@ private:
 public:
 	// The camera that determines what we're rendering to the screen
 	static Camera camera;
+
 	// Manages all the different types of "screens"
 	static ScreenManager screenManager;
 	

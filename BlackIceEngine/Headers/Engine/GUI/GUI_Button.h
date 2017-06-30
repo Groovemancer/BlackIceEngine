@@ -22,6 +22,7 @@ private:
 	Timer activateTimer;
 	
 	boost::function<void()> clickedCallback;
+	std::function<void()> clickedCallback2;
 
 public:
 	GUI_Button();
@@ -33,6 +34,7 @@ public:
 	
 	// TODO: Create callback function to be called when GUI Button is clicked
 	void SetClickedCallback( boost::function<void()> callback ) { clickedCallback = callback; }
+	void SetClickedCallback( std::function<void()> callback) { clickedCallback2 = callback; }
 
 	void Render();
 	bool MouseHovering();

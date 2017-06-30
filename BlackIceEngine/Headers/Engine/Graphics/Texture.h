@@ -32,16 +32,6 @@ public:
 	GLuint GetID();
 	int GetWidth();
 	int GetHeight();
-
-	// Old stuff
-	/*
-	int w;
-	int h;
-
-	void Apply_Colorkey( Uint32 colorKey );
-	void Load_Image( std::string filename, Uint32 colorkey = 0x00ff00ff ); // Default Colorkey: Magenta
-	void Render( Vector2f position, Vector2f origin, float rotation, float scale, SDL_Rect* frameRect = NULL );
-	*/
 };
 
 #endif /* INC_TEXTURE_H */

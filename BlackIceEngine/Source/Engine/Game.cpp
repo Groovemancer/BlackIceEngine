@@ -191,16 +191,16 @@ bool Game::ReadConfigFile()
 
 	boost::property_tree::ptree pt;
 	boost::property_tree::ini_parser::read_ini( "config.ini", pt );
-
+	
 	screenWidth = pt.get< int >( "Display.screenWidth" );
 	screenHeight = pt.get< int >( "Display.screenHeight" );
 	windowState = pt.get< int >( "Display.fullscreen" );
 	
-	GameKeys::MenuConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuConfirmKey" ) );
-	GameKeys::MenuAltConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuAltConfirmKey" ) );
-	GameKeys::MenuDownKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuDownKey" ) );
-	GameKeys::MenuUpKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuUpKey" ) );
-
+	GameKeys::MenuConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuConfirmKey", "KEY_RETURN" ) );
+	GameKeys::MenuAltConfirmKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuAltConfirmKey", "KEY_SPACE" ) );
+	GameKeys::MenuDownKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuDownKey", "KEY_DOWN" ) );
+	GameKeys::MenuUpKey = KeyBiMap.right.at( pt.get< std::string >( "Keybindings.menuUpKey", "KEY_UP" ) );	
+	
 	// Outdated stuff below...
 
 	/*

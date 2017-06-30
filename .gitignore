@@ -42,8 +42,17 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Visual C++ cache files
 *.sdf
 *.suo
 *.user
 Debug/
 ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.cachefile
+/.vs/BlackIceEngine/v15
+/.vs
+/.vs

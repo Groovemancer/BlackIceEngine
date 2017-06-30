@@ -13,7 +13,7 @@
 #include <boost\bind.hpp>
 #include "Helpers\GameKeys.h"
 #include "Interfaces\ICallback.h"
-#include "Engine\Helpers\IniFile.h"
+//#include "Engine\Helpers\IniFile.h"
 #include "Engine\MainGame.h"
 #include "Engine\Game.h"
 #include "Helpers\InputManager.h"

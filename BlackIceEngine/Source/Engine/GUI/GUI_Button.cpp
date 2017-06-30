@@ -73,7 +73,8 @@ bool GUI_Button::MouseActivating( MouseButton button )
 		OutputDebugString( "Activating Button!\n" );
 
 		// Callback function is called here. Currently only setup to work with void functions.
-		clickedCallback();
+		if (clickedCallback != NULL)
+			clickedCallback();
 		return true;
 	}
 	return false;
@@ -110,7 +111,7 @@ void GUI_Button::Render()
 			// Top-mid
 			SDL_Rect tm = { guiSkin->btn_a_width, 0, guiSkin->btn_a_width, guiSkin->btn_a_height };
 			guiSkin->btn_a_texture->Stretch( buttonRect.w - ( guiSkin->btn_a_width * 2 ), guiSkin->btn_a_height );
-			guiSkin->btn_a_texture->Render( position + Vector2f( guiSkin->btn_a_width, 0 ), Vector2f::Zero(), 0, 1, &tm );
+			guiSkin->btn_a_texture->Render( position + Vector2f( float(guiSkin->btn_a_width), 0 ), Vector2f::Zero(), 0, 1, &tm );
 
 			// Top-right
 			SDL_Rect tr = { guiSkin->btn_a_width * 2, 0, guiSkin->btn_a_width, guiSkin->btn_a_height };

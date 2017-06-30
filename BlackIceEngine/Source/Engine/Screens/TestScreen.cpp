@@ -3,7 +3,7 @@
 TestScreen::TestScreen()
 	: Screen()
 {
-	buttonSelection.Load_From_File( "Resources\\Textures\\GUI\\buttonSelection.png" );
+	buttonSelection.Load_From_File( "Resources/Textures/GUI/buttonSelection.png" );
 	playButton.Load_From_File( "Resources\\Textures\\GUI\\playButton.png" );
 	quitButton.Load_From_File( "Resources\\Textures\\GUI\\quitButton.png" );
 	background.Load_From_File( "Resources\\Textures\\mainMenuBackground.png" );
@@ -26,7 +26,7 @@ TestScreen::TestScreen()
 	//testButton->SetTextureA( testBtnTx_a );
 	//testButton->SetTextureH( testBtnTx_h );
 	boost::function< void() > callback = boost::bind( &TestScreen::QuitGame, this );
-	testButton->SetClickedCallback( callback );
+	testButton->SetClickedCallback(callback);
 
 	// TODO: Add new screen to transition to from Play button
 	selectionIndex = 0;
@@ -117,6 +117,6 @@ void TestScreen::Render()
 
 void TestScreen::QuitGame()
 {
-	OutputDebugString( "Test?" );
+	OutputDebugString( "Test?\n" );
 	//MainGame::Quit();
 }

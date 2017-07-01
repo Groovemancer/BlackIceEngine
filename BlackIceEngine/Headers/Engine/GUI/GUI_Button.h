@@ -1,5 +1,4 @@
-#ifndef INC_GUI_BUTTON_H
-#define INC_GUI_BUTTON_H
+#pragma once
 
 typedef enum
 {
@@ -40,5 +39,3 @@ public:
 	bool MouseHovering();
 	bool MouseActivating( MouseButton mouseButton );
 };
-
-#endif /* INC_GUI_BUTTON_H */

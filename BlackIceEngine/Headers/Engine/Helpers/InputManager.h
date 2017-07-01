@@ -1,5 +1,4 @@
-#ifndef INC_INPUTMANAGER_H
-#define INC_INPUTMANAGER_H
+#pragma once
 
 #include "Keys.h"
 #include "MouseButtons.h"
@@ -17,5 +16,3 @@ public:
 	static SDL_Point GetMousePosition();
 	static bool Update();
 };
-
-#endif /* INC_INPUTMANAGER_H */

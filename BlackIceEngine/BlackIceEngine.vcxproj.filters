@@ -93,17 +93,17 @@
     <ClInclude Include="Headers\Engine\Helpers\MouseButtons.h">
       <Filter>Header Files\Engine\Helpers</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\Engine\Interfaces\ICallback.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\Engine\Helpers\GameKeys.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Engine\GUI\GUI_Skin.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine\GUI</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Engine\Graphics\Font.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\Interfaces\ICallback.h">
+      <Filter>Header Files\Engine\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine\Helpers\GameKeys.h">
+      <Filter>Header Files\Engine\Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -146,11 +146,11 @@
     <ClCompile Include="Source\Engine\Screens\TestScreen.cpp">
       <Filter>Source Files\Engine\Screens</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Engine\GUI\GUI_Skin.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Engine\Helpers\GameKeys.cpp">
+      <Filter>Source Files\Engine\Helpers</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

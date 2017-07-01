@@ -22,7 +22,7 @@ TestScreen::TestScreen()
 	
 	SDL_Rect btnRect = { 0, 0, 192, 96 };
 
-	testButton = new GUI_Button( guiSkin, Vector2f( float( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ) ), 120 ), btnRect );
+	testButton = new GUI_Button( guiSkin, Vector2f( ( Game::GetWidth() / 2 ) - ( btnRect.w / 2 ), 120 ), btnRect );
 	//testButton->SetTextureA( testBtnTx_a );
 	//testButton->SetTextureH( testBtnTx_h );
 	boost::function< void() > callback = boost::bind( &TestScreen::QuitGame, this );

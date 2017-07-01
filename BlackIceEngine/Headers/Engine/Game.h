@@ -1,5 +1,4 @@
-#ifndef INC_GAME_H
-#define INC_GAME_H
+#pragma once
 
 #include <SDL.h>
 #include "Graphics\Camera.h"
@@ -42,5 +41,3 @@ public:
 	static int GetWidth();
 	static int GetHeight();
 };
-
-#endif

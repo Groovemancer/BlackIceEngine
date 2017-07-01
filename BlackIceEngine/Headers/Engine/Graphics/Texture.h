@@ -1,5 +1,4 @@
-#ifndef INC_TEXTURE_H
-#define INC_TEXTURE_H
+#pragma once
 
 #include <SDL.h>
 #include <SDL_opengl.h>
@@ -21,7 +20,7 @@ private:
 public:
 	Texture();
 	~Texture();
-	bool Load_From_File( std::string path, Uint32 colorkey = 0xffff00ff ); /* Default Colorkey: Magenta */
+	bool Load_From_File( std::string path, Uint32 colorkey = 0xFFFF00FF ); /* Default Colorkey: Magenta */
 	bool Load_From_Pixels( GLuint* pixels, GLuint width, GLuint height );
 	void Apply_Colorkey( Uint32 colorKey );
 	void Free();
@@ -33,5 +32,3 @@ public:
 	int GetWidth();
 	int GetHeight();
 };
-
-#endif /* INC_TEXTURE_H */

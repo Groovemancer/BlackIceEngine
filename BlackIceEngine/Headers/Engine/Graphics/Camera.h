@@ -1,5 +1,4 @@
-#ifndef INC_CAMERA_H
-#define INC_CAMERA_H
+#pragma once
 
 #include "Engine\Helpers\Vector2f.h"
 
@@ -15,5 +14,3 @@ public:
 	Camera( Vector2f position, float speed );
 	void LockCamera();
 };
-
-#endif /* INC_CAMERA_H */

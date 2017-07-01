@@ -1,5 +1,4 @@
-#ifndef INC_VECTOR2F_H
-#define INC_VECTOR2F_H
+#pragma once
 
 class Vector2f
 {
@@ -11,6 +10,12 @@ public:
 	// Functions
 	Vector2f();
 	Vector2f( float x, float y );
+
+	// Will cast ints to floats inside constructor
+	// Only purpose is to suppress warnings
+	Vector2f( int x, int y );
+	Vector2f( int x, float y );
+	Vector2f( float x, int y );
 
 	static Vector2f Down()	{ return Vector2f( 0.0f, 1.0f ); }
 	static Vector2f Left()	{ return Vector2f(-1.0f, 0.0f ); }
@@ -57,5 +62,3 @@ public:
 	float operator &(void) const; // Returns Magnitude
 	Vector2f operator !(void) const; // Returns Normalized
 };
-
-#endif /* INC_VECTOR2F_H */

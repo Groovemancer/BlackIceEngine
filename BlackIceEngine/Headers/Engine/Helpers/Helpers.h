@@ -1,5 +1,4 @@
-#ifndef INC_HELPERS_H
-#define INC_HEPLERS_H
+#pragma once
 
 #include <SDL.h>
 #include <string>
@@ -12,5 +11,3 @@ public:
 	static float Clampf( float value, float min, float max );
 	static int Clampi( int value, int min, int max );
 };
-
-#endif /* INC_HELPERS_H */

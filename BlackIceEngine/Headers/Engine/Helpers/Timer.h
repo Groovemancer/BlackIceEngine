@@ -1,5 +1,4 @@
-#ifndef INC_TIMER_H
-#define INC_TIMER_H
+#pragma once
 
 class Timer
 {
@@ -31,5 +30,3 @@ public:
     bool Is_Started();
     bool Is_Paused();
 };
-
-#endif /* INC_TIMER_H */

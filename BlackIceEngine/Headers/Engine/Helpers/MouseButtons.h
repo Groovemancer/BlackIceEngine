@@ -1,5 +1,4 @@
-#ifndef MOUSE_BUTTONS
-#define MOUSE_BUTTONS
+#pragma once
 
 #include <SDL.h>
 
@@ -11,5 +10,3 @@ typedef enum {
 	MOUSE_BUTTON_X1			= SDL_BUTTON_X1,		/* Extra Mouse Button 1 */
 	MOUSE_BUTTON_X2			= SDL_BUTTON_X2,		/* Extra Mouse Button 2 */
 } MouseButton;
-
-#endif

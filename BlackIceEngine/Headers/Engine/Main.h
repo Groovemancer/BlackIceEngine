@@ -1,5 +1,4 @@
-#ifndef INC_MAIN_H
-#define INC_MAIN_H
+#pragma once
 
 #include <SDL.h>
 #include <SDL_image.h>
@@ -33,5 +32,3 @@
 #include <vector>
 #include <map>
 #include <vld.h>	/* Memory Leak Detector */
-
-#endif /* INC_MAIN_H */

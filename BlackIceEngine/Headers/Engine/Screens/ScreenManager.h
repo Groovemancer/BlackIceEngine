@@ -1,5 +1,4 @@
-#ifndef INC_SCREENMANAGER_H
-#define INC_SCREENMANAGER_H
+#pragma once
 
 #include "Screen.h"
 #include <stack>
@@ -16,5 +15,3 @@ public:
 	void Update( int ticks );
 	void Render();
 };
-
-#endif /* INC_SCREENMANAGER_H */

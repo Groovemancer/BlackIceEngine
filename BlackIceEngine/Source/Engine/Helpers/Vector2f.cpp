@@ -12,6 +12,28 @@ Vector2f::Vector2f( float x, float y )
 	Vector2f::y = y;
 }
 
+#pragma region Constructors to convert ints to floats
+
+Vector2f::Vector2f( int x, int y )
+{
+	Vector2f::x = float( x );
+	Vector2f::y = float( y );
+}
+
+Vector2f::Vector2f( int x, float y )
+{
+	Vector2f::x = float( x );
+	Vector2f::y = y;
+}
+
+Vector2f::Vector2f( float x, int y )
+{
+	Vector2f::x = x;
+	Vector2f::y = float( y );
+}
+
+#pragma endregion
+
 float Vector2f::Magnitude( Vector2f v1 )
 {
 	return std::sqrtf( std::powf( v1.x, 2.0f ) + std::powf( v1.y, 2.0f ) );

@@ -1,5 +1,4 @@
-#ifndef INC_MAINGAME_H
-#define INC_MAINGAME_H
+#pragma once
 
 #include "Game.h"
 #include "Helpers\Timer.h"
@@ -32,5 +31,3 @@ public:
 
 	static Game Game();
 };
-
-#endif /* INC_MAINGAME_H */

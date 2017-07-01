@@ -54,5 +54,4 @@ ipch/
 *.opensdf
 *.cachefile
 /.vs/BlackIceEngine/v15
-/.vs
-/.vs
+/.vs/

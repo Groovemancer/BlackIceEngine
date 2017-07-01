@@ -1,5 +1,4 @@
-#ifndef INC_GUI_SKIN_H
-#define INC_GUI_SKIN_H
+#pragma once
 
 class GUI_Skin
 {
@@ -25,5 +24,3 @@ public:
 	GUI_Skin();
 	~GUI_Skin();
 };
-
-#endif

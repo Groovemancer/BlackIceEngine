@@ -1,5 +1,4 @@
-#ifndef INC_TESTSCREEN_H
-#define INC_TESTSCREEN_H
+#pragma once
 
 #include "Engine\GUI\GUI_Button.h"
 
@@ -21,5 +20,3 @@ public:
 	void Render();
 	void QuitGame();
 };
-
-#endif /* INC_TESTSCREEN_H */

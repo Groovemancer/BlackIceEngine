@@ -1,5 +1,4 @@
-#ifndef KEYS
-#define KEYS
+#pragma once
 
 #include <SDL.h>
 #include <boost\assign\list_of.hpp>
@@ -288,5 +287,3 @@ const keyBM_type KeyBiMap =
 	( KEY_PRINT, "KEY_PRINT" )
 	( KEY_SYSREQ, "KEY_SYSREQ" )
 	( KEY_MENU, "KEY_MENU" );
-
-#endif

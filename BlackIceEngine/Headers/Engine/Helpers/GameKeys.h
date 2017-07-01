@@ -1,5 +1,4 @@
-#ifndef GAME_KEYS
-#define GAME_KEYS
+#pragma once
 
 #include "Keys.h"
 
@@ -11,5 +10,3 @@ public:
 	static Key MenuUpKey;
 	static Key MenuDownKey;
 };
-
-#endif

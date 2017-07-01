@@ -1,5 +1,4 @@
-#ifndef INC_SCREEN_H
-#define INC_SCREEN_H
+#pragma once
 
 class Screen
 {
@@ -16,5 +15,3 @@ public:
 	bool IsDisposable();
 	Screen* GetNextScreen();
 };
-
-#endif /* INC_SCREEN_H */
